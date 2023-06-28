@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Filmovi client</title>
+	<link rel="stylesheet" type="text/css" href="css/search.css"/>
+	<script type="text/javascript" src="js/skripta.js"></script>
+	<script type="text/javascript" src="js/reziser.js"></script>
+</head>
+<body>
+	<div class="container">
+		<button type="button" id="btnFilmovi" onclick="loadFilmoviClick()">Filmovi</button>
+		<button type="button" id="btnReziser" onclick="loadReziseriTable()">Reziseri</button>
+		<div id="data">
+		</div>
+		<br />
+		<br />
+		<div id="formDiv" style="display:none">
+			<form method="post" action="post/" id="filmForm" onsubmit="return submitFilmForm()">
+				<p><label>Ime: <input id="ime"></label></p>
+				<p><label>Zanr: <input id="zanr"></label></p>
+				<p><label>Godina: <input id="godina"></label></p>
+				<p><label>Reziser: <select id="reziser" >
+					</select></label></p>
+				<br />
+				<p><button>Submit</button></p>
+			</form>
+		</div>
+		<div id="formDivReziser" style="display:none">
+			<form method="post" action="post/" id="reziserForm" onsubmit="return submitReziserForm()">
+				<p><label>Ime: <input id="reziserIme"></label></p>
+				<p><label>Prezime: <input id="reziserPrezime"></label></p>
+				<p><label>Starost: <input id="reziserStarost"></label></p>
+				<br />
+				<p><button>Submit</button></p>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
